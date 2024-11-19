@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Content Downloader</title>
+</head>
+<body>
+    <h1>URL Content Downloader</h1>
+
+    <!-- Form to get the URL and output file -->
+    <form method="POST">
+        <label for="url">Enter the URL to download content from:</label><br>
+        <input type="text" id="url" name="url" required><br><br>
+        
+        <label for="output_file">Enter the path to save the content:</label><br>
+        <input type="text" id="output_file" name="output_file" required><br><br>
+        
+        <input type="submit" value="Download Content">
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
