@@ -5,11 +5,11 @@ def download_url_content(url, output_file):
     Downloads content from a given URL and saves it to a specified file.
     """
     try:
-        response = requests.get(url)  # Send a GET request to the URL
-        response.raise_for_status()  # Raise an error for bad responses (4xx or 5xx)
+        response = requests.get(url)  
+        response.raise_for_status()  
 
         with open(output_file, 'wb') as file:
-            file.write(response.content)  # Save the content to the file
+            file.write(response.content)  
 
         print(f"Content successfully downloaded and saved to: {output_file}")
     except requests.exceptions.RequestException as e:

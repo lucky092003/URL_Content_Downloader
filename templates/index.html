@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Content Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #5a5aaf;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #5a5aaf;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4c4c96;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Content Downloader</h1>
+
+        <!-- Form to get the URL and output file -->
+        <form method="POST">
+            <label for="url">Enter the URL to download content from:</label>
+            <input type="text" id="url" name="url" placeholder="Enter a valid URL..." required>
+            
+            <label for="output_file">Enter the path to save the content:</label>
+            <input type="text" id="output_file" name="output_file" placeholder="Enter output file path..." required>
+            
+            <input type="submit" value="Download Content">
+        </form>
+
+        <!-- Placeholder for result message -->
+        <div class="result" id="result">
+            <h2>Result:</h2>
+            <p>No action taken yet. Please submit a URL to see results here.</p>
+        </div>
+    </div>
+</body>
+</html>
